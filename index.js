@@ -120,9 +120,9 @@ app.use((err, req, res, next) => {
     res.status(statusCode);
     const stack = err.stack;
     res.render("error", { message, statusCode, stack });
-})
+}) 
 
-//PORT Listening.....
+//PORT Listening....
 app.listen(port, () => {
     console.log("Listening on port 3000");
 })
