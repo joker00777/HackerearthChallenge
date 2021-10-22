@@ -32,7 +32,6 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-
 app.get("/", (req, res) => {
     res.redirect("/home/0");
 })
@@ -59,7 +58,8 @@ app.get("/home/:start", catchAsync(async (req, res) => {
     if (remainder > 0) {
         total += 1;
     }
-    res.render("home", { images, start, total });
+    const index = path.join(__dirname, 'views', 'home');
+    res.render(index, { images, start, total });
 }))
 
 
