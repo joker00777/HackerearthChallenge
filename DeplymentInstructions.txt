@@ -1,0 +1,10 @@
+Github link->https://github.com/joker00777/HackerearthChallenge
+Project link->https://shielded-island-77786.herokuapp.com/
+Clone the project ->git clone https://github.com/joker00777/HackerearthChallenge
+
+This will install all the dependencies
+step 1)npm install
+step 2)node index.js 
+step 3)http://localhost:3000/
+
+You are good to go.
