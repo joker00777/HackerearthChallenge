@@ -10,7 +10,7 @@ const Images = require("./models/image");
 const catchAsync = require("./catchAsync");
 const methodOverride = require("method-override");
 const dbUrl=process.env.DB_URL;
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 //'mongodb://localhost/images'
 mongoose.connect(dbUrl, {
@@ -124,5 +124,5 @@ app.use((err, req, res, next) => {
 
 //PORT Listening....
 app.listen(port, () => {
-    console.log("Listening on port 3000");
+    console.log(`Listening on port ${port}`);
 })
