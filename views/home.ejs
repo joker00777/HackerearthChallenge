@@ -1,0 +1,60 @@
+<% layout('layouts/boilerplate') %> 
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination mt-2 pt-2 mb-1 pb-1">
+        <li class="page-item"><a class="page-link" href="/home/0">Pages</a></li>
+        <%for(var i=1;i <= total ;i++) {%>
+            <li class="page-item"><a class="page-link" href="/home/<%=i-1%>"><%=i%></a></li>
+        <%}%>
+      
+    </ul>
+  </nav>
+
+<ul>
+    <% for (var i = start; i < start+9; i++) {%>
+        <%if(i>=images.length){%>
+            <%break;%>
+        <%}%>
+        <% if((i-start)%3===0){ %>
+        <div class="row mt-4 mb-4">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%=images[i].url%>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=images[i].name %></h5>
+                        <p class="card-text"><%=images[i].details%></p>
+                        <a href="/show/<%=images[i].id%>" class="btn btn-primary"><%=images[i].name%></a>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+        <% if((i-start)%3==1){ %>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%=images[i].url%>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=images[i].name %></h5>
+                        <p class="card-text"><%=images[i].details%></p>
+                        <a href="/show/<%=images[i].id%>" class="btn btn-primary"><%=images[i].name%></a>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+        <% if((i-start)%3==2){ %>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<%=images[i].url%>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=images[i].name %></h5>
+                        <p class="card-text"><%=images[i].details%></p>
+                        <a href="/show/<%=images[i].id%>" class="btn btn-primary"><%=images[i].name%></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    <% } %>
+</ul>
+
+

@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %>
+<div class="container h-100 mt-5 pt-5">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-12">
+            <form class="form-example needs-validation" action="/<%=image.id%>/edit?_method=PUT" method="post" novalidate>
+                <div class="form-group mb-2 required ">
+                    <label class="control-label" for="url">Image url</label>
+                    <input type="url" value="<%=image.url%>" class="form-control" id="url" name="image[url]" placeholder="Enter Image url" required>
+                </div>
+                <div class="form-group mb-2 required ">
+                    <label class="control-label" for="name">Give your Image a name</label>
+                    <input type="text" value="<%=image.name%>" class="form-control" id="name" name="image[name]" placeholder="Enter Image name" required>
+                </div>
+                <div class="form-group mb-4 required">
+                    <label class="control-label" for="details" >Enter image delails</label>
+                    <textarea type="text" class="form-control" id="details" name="image[details]" placeholder="Enter Image details" required> <%=image.details%> </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

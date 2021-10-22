@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate') %>
+<div class="row mt-5">
+    <div class="col-12 mt-5">
+        <img width = "100%" height = "60%" src="<%=image.url%>" alt="">
+        <div class="card mb-3">
+            <div class="card-body">
+              <h1 class="card-title"><%=image.name%></h1>
+              <p class="card-text"><%=image.details%></p>
+                <div class="col-12">
+                    <a href="/<%=image.id%>/edit" class="col-md-4 btn btn-secondary"> Edit </a>
+                    <form action="/<%=image.id%>/delete?_method=DELETE" method="post">
+                        <button class="col-md-4 mt-2 btn btn-danger"> Delete </button>
+                    </form>
+                </div>          
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
